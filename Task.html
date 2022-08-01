@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./Task.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#myTable").DataTable();
+      });
+    </script>
+  </head>
+  <body>
+     <section class="jquerySection">
+      <article class="jqueryArticle">
+        <div class="card text-center">
+  <div class="card-header">
+     <a class="nav-link" href="#">Workstation | CSR | AdwitAds</a>
+  </div>
+  <div class="card-body">
+          <div class="jquerynavdiv">
+             <nav  class="navbar navbar-expand-lg navbar-light bg-light" >
+        <a class="navbar-brand" href="#">ad<sup style="font-size: 20px; color:red">W</sup>itads</a>
+      
+        <div style="float: right; display: flex; align-items: flex-end; justify-content: flex-end; " class="container-fluid" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Dashboard <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Workstation</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link disabled">Report</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"><i class="fa-solid fa-envelope"></i></a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"><i class="fa-solid fa-comment"></i></a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      </div>
+              <!-- **************************************************************************************************************************** -->
+ <div style="height:30px; width:100%; display: flex; align-items: center; justify-content: flex-start ; border-bottom: 1px solid; border-top-right-radius: 5px; color: #fff;" class="container-fluid" id="navbarSupportedContent">
+          
+            <ul class="jqueryul" style="display: flex; align-items:center;justify-content: space-between;">
+              <li>All(6)</li>
+              <li>Revision(2)</li>
+              <li>New Ads(2)</li>
+              <li>QA(3)</li>
+              <li>Design(1)</li>
+              <li>Proof Sent</li>
+            </ul>
+        </div
+                     
+
+      <div >
+            <table id="myTable" border="1" style="border-collapse: collapse">
+              <thead>
+                <tr>
+                  <th>Order Data</th>
+                  <th>Order Type</th>
+                  <th>AdwitAds ID</th>
+                  <th>Unique Job Number</th>
+                  <th>Advertiser Name</th>
+                  <th>Ad Rep Name</th>
+                  <th>Status</th>
+                  <th>Priority</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>22nd Feb 2022</td>
+                  <td>Print</td>
+                  <td>2222 2222</td>
+                  <td>Koch and Sons</td>
+                  <td>Janice Monahan</td>
+                  <td>Janice Monahan</td>
+                  <td>In Production</td>
+                  <td>1</td>
+                  <td><button id="jquerybutton1">Take Over</button></td>
+                </tr>
+                <tr>
+                  <td>22nd Feb 2022</td>
+                  <td>Online</td>
+                  <td>3333 3333</td>
+                  <td>Steuber LLC</td>
+                  <td>Rollin Fadel</td>
+                  <td>Rollin Fadel</td>
+                  <td>Order Accepted</td>
+                  <td>4</td>
+                  <td><button onclick="showHideDesignsection()" id="jquerybutton2">Start Design</button></td>
+                </tr>
+                <tr>
+                  <td>22nd Feb 2022</td>
+                  <td>Page</td>
+                  <td>4444 4444</td>
+                  <td>Konopelski Group</td>
+                  <td>Lera Stroman</td>
+                  <td>Lera Stroman</td>
+                  <td>Revision Submitted</td>
+                  <td>5</td>
+                  <td><button onclick="showHideRevisionsection()" id="jquerybutton22">Start Design</button></td>
+                </tr>
+                <tr>
+                  <td>22nd Feb 2022</td>
+                  <td>Page</td>
+                  <td>5555 5555</td>
+                  <td>Haeber Inc</td>
+                  <td>Adan Schiller</td>
+                  <td>Adan Schiller</td>
+                  <td>Proof Sent</td>
+                  <td>6</td>
+                  <td class="jquerytd">
+                    <button onclick="showHideOrdersection()" class="jquerybutton3"><i class="fa-solid fa-eye"></i></button>
+                    <button onclick="showHideProofsection()"
+                    class="jquerybutton33"><i class="fa-solid fa-file-lines"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>22nd Feb 2022</td>
+                  <td>Online</td>
+                  <td>6666 6666</td>
+                  <td>Apple Inc</td>
+                  <td>Joe Root</td>
+                  <td>Joe Root</td>
+                  <td>Design Check</td>
+                  <td>3</td>
+                  <td class="jquerytd">
+                    <button class="jquerybutton3"><i class="fa-solid fa-eye"></i></button>
+                    <button class="jquerybutton3"><i class="fa-solid fa-file-lines"></i></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>22nd Feb 2022</td>
+                  <td>Online</td>
+                  <td>6666 6666</td>
+                  <td>Apple Inc</td>
+                  <td>Joe Root</td>
+                  <td>Joe Root</td>
+                  <td>In QA</td>
+                  <td>2</td>
+                  <td class="jquerytd">
+                    <button class="jquerybutton3"><i class="fa-solid fa-eye"></i></button>
+                    <button class="jquerybutton3"><i class="fa-solid fa-file-lines"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+  <!-- </div> -->
+  <div style="width: 100%;" class="card-footer text-muted">
+    <div class="jquerydivlast">
+    <a style="margin-left: -20px;" href=""> Faq's </a><a style="margin-left: 20px;" href=""> Contact Us</a>
+  </div>
+  </div>
+</div>
+      </article>
+    </section> 
+<div style="display: flex;margin-left: 20px;">
+  <div style="width: 100px; display: flex;">
+ 
+  <div>
+  <div style="display: flex;" class="jquerybutton3"><i class="fa-solid fa-eye"></i> 
+  <h5 style="margin-left: 10px;">View Order</h5></div>
+  </div>
+</div>
+<div>
+  <div style="display: flex; margin-left: 20px;" class="jquerybutton3"><i class="fa-solid fa-file-lines"></i>
+  <h5 style="margin-left: 10px;">View PDF in new window-Or ask Open With</h5></div>
+  </div>
+</div>
+<!-- *************************************************************************************************************************************** -->
+
+<section class="Ordersection">
+  <article class="Orderarticle">
+    <div class="card text-center">
+  <div style="text-align: left;" class="card-header">
+    View Order-(AdwitAds ID)-{Unique Job ID}
+  </div>
+  <div  class="Orderdiv">
+  <div>
+  <div class="card-body">
+    <div class="Orderdiv2"  class="card border-primary mb-3" style="max-width: 18rem;">
+  <div style="text-align: left;"  class="card-header">Order Details</div>
+  <div style="font-size: 12px;" class="card-body text-secondary">
+    <div>
+    <h5  class="card-title">Order Date:</h5>
+     <h5 class="card-title">Public Date:</h5>
+      <h5 class="card-title">Type of Ad: Print/Web</h5>
+       <h5 class="card-title">Color of Ad:</h5>
+        <h5 class="card-title">Size of Ad:</h5>
+ </div>
+      </div>
+</div>
+<div class="Orderdiv2" class="card border-secondary mb-3" style="max-width: 18rem;">
+  <div style="text-align: left;"  class="card-header">Time Log</div>
+  <div  class="card-body text-secondary">
+    <h5 class="card-title">Order Submitted:</h5>
+    <h5 class="card-title">Files Submitted:</h5>
+    <h5 class="card-title">Proof(v1) Sent:</h5>
+    <h5 class="card-title">Proof(v1a) Sent:</h5>
+    <h5 class="card-title">Proof(v1b) Sent:</h5>
+  </div>
+  </div>
+  </div>
+</div>
+<div>
+<div class="Orderdiv2" class="card border-success mb-3" style="max-width: 18rem;">
+  <div style="text-align: left;"  class="card-header">Advertiser Details</div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title">Advertiser Name:</h5>
+    <h5 class="card-title">Contact Person:</h5>
+    <h5 class="card-title">Email:</h5>
+    <h5 class="card-title">Phone:</h5>
+  </div>
+</div>
+<div class="Orderdiv2" class="card border-danger mb-3" style="max-width: 18rem;">
+  <div style="text-align: left;" class="card-header">Files</div>
+  <div class="card-body text-secondary">
+    <h5 class="card-title">Proof1:v1</h5>
+    <h5 class="card-title">File Submitted:</h5>
+    <h5 style="border-bottom: 2px solid lightgray;" class="card-title">Ad Proof:</h5>
+    <h5 class="card-title">Proof2:v1a</h5>
+    <h5 class="card-title">File Submitted:</h5>
+    <h5 class="card-title">Ad Proof:</h5>
+  </div>
+  </div>
+</div>
+  </div>
+  </div>
+</div>
+  </article>
+</section>
+
+
+<!-- *************************************************************************************************************************************** -->
+<section class="Proofsection">
+  <article class="Proofarticle">
+    <div class="card text-center">
+  <div style="text-align: left;" class="card-header">
+    View Proof-(AdwitAds ID)-{Unique Job ID}
+  </div>
+  <div class="Proofdiv" class="card-body">
+    <img style="height: 50vh; width:500px; border-radius: 5px;" src="https://tse1.mm.bing.net/th?id=OIP.mU20L3hM0Z_Xv694_dgcAAHaFL&pid=Api&P=0" alt="">
+  </div>
+  <div style="display: flex; align-items:center; justify-content: space-between;" class="card-footer text-muted">
+    <button style="border: 1px solid gray; border-radius: 5px;">Download PDF</button>
+    <button style="border: 1px solid gray; border-radius: 5px;">Print</button>
+  </div>
+</div>
+  </article>
+</section>
+
+
+<!-- *************************************************************************************************************************************** -->
+
+<section class="Designsection">
+  <article class="Designarticle">
+    <div class="card text-center">
+      <div class="Designdiv1">
+  <div class="card-header">
+    Start Design-New Ad<i onclick="showHideDesignsection()" style="text-align: center;float: right;height: 20px;width: 20px; border: 1px solid lightgray; border-radius: 50%;"  class="fa-solid fa-xmark"></i>
+  </div>
+  </div>
+  <div >
+    
+    <div  class="Designdiv2">
+<div>
+  <h4 style="text-align: left; font-size: 18px;text-decoration: underline;">Order Information</h4>
+<h5>Publication Name:</h5>
+<h5>Advertiser Name:</h5>
+<h5>Type of Ad: Print/Web</h5>
+</div>
+    
+    <div style="margin-top: 25px;">
+<h5>Category</h5>
+<h5>CSR Instructions:</h5>
+<h5>Rush/Standard:</h5>
+    </div>
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    <button style="border: 1px solid gray; border-radius: 5px;">Download InDesign and Start</button>
+  </div>
+</div>
+  </article>
+</section>
+
+
+<!-- *************************************************************************************************************************************** -->
+
+<section class="Revisionsection">
+  <article class="Revisionarticle">
+    <div class="card text-center">
+      <div class="Revisiondiv1">
+  <div class="card-header">
+    Start Design-Revision<i onclick="showHideRevisionsection()" style="text-align: center;float: right;height: 20px;width: 20px; border: 1px solid lightgray; border-radius: 50%;"  class="fa-solid fa-xmark"></i>
+  </div>
+  </div>
+  <div >
+    
+    <div  class="Revisiondiv2">
+<div>
+  <h5 style="text-align: left; font-size: 12px;">Notes & Instructions</h5>
+<div class="Revisiondiv2a"></div>
+</div>
+<div class="Revisiondiv2b">
+  <h5 style="text-align: left; font-size: 12px;">Download/View Files</h5>
+<div class="Revisiondiv2bb">
+  <button style="border: 1px solid gray; border-radius: 5px;">Maked Up PDF</button>
+  <button style="border: 1px solid gray; border-radius: 5px;">Assets</button>
+</div>
+</div>
+<div>
+  <h5 style="text-align: left; font-size: 12px;">Download/View Previous Files</h5>
+<div class="Revisiondiv2bbb">
+  <div>Version 2</div>
+  <div class="Revisiondiv2bbbbb">
+    <button style="border: 1px solid gray; border-radius: 5px;">Assets</button>
+  <button style="border: 1px solid gray; border-radius: 5px;">Native Files</button>
+</div>
+  
+</div>
+<div class="Revisiondiv2bbbb">
+  <div>Version 1</div>
+  <div class="Revisiondiv2bbbbbb"><button style="border: 1px solid gray; border-radius: 5px;">Assets</button>
+  <button style="border: 1px solid gray; border-radius: 5px;">Native Files</button>
+<button style="border: 1px solid gray; border-radius: 5px;">Proofs</button>
+</div>
+  
+</div>
+</div>
+    
+    
+    </div>
+  </div>
+  <div class="card-footer text-muted">
+    <button style="border: 1px solid gray; border-radius: 5px;">Download InDesign and Start</button>
+  </div>
+</div>
+  </article>
+</section>
+
+
+
+
+     <script src="./Task.js"></script>
+      <script src="../bootstrap-4.6.1-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
